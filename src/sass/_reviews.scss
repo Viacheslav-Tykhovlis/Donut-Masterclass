@@ -1,4 +1,17 @@
 .section-reviews {
+  // padding-top: 20px;
+  // padding-bottom: 32px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 23px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding-top: 36px;
+    padding-bottom: 30px;
+  }
+
   &__title {
     color: $colorText;
     font-family: 'Caveat Brush';
@@ -21,6 +34,7 @@
 
 .container-reviews {
   position: relative;
+  text-align: center;
 }
 
 .reviews-bcg {
@@ -74,7 +88,242 @@
 }
 
 .portret-feedback-wrapper {
+  // @extend %centredColumnFlex;
+}
+
+// // small slider-right styles
+.cliens-portret-small-right {
+  z-index: 1000;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    content: '';
+    // display: flex;
+    // gap: 400px;
+    display: block;
+    top: 15;
+    right: 32px;
+
+    width: 152px;
+    // height: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 123px;
+    width: 285px;
+    // height: 285px;
+  }
+}
+
+.slider-right-small .slick-list {
+  overflow: hidden;
+}
+
+.slider-right-small .slick-track {
+  // gap: 300px;
+  // margin-right: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+// small slider styles
+.cliens-portret-small {
+  z-index: 1000;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+    content: '';
+    // display: flex;
+    // gap: 400px;
+    display: block;
+    top: 15;
+    left: 32px;
+
+    width: 152px;
+    // height: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 123px;
+    width: 285px;
+    // height: 285px;
+  }
+}
+
+.clients-portret-small__item {
+  @media screen and (min-width: 768px) {
+    width: 152px;
+    // padding-left: 100px;
+    // margin-right: 400px;
+    // height: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    width: 285px;
+    // height: 285px;
+  }
+}
+.slider-small .slick-list {
+  overflow: hidden;
+}
+
+.slider-small .slick-track {
+  // gap: 300px;
+  // margin-right: 300px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-small .slider__item {
+  // margin-right: 500px;
+  // margin-left: auto;
+}
+
+.slider-small {
+  // position: absolute;
+  // top: 0;
+  // left: 0;
+}
+
+.slider-small__item {
+}
+
+// BIG slider styles
+.slider {
+  position: relative;
+}
+/* Слайдер */
+.slick-slider {
+}
+/* Слайдер запущен */
+.slick-slider.slick-initialized {
+}
+/* Слайдер с точками */
+.slick-slider.slick-dotted {
+}
+/* Ограничивающая оболочка */
+.slick-list {
+  overflow: hidden;
+}
+/* Лента слайдов */
+.slick-track {
+  display: flex;
+  // justify-content: space-between;
+  // gap: 200px;
+}
+/* Слайд */
+.slick-slide {
   @extend %centredColumnFlex;
+
+  text-align: center;
+}
+/* Слайд активный (показывается) */
+.slick-slide.slick-active {
+}
+/* Слайд основной */
+.slick-slide.slick-current {
+}
+/* Слайд по центру */
+.slick-slide.slick-center {
+}
+/* Клонированный слайд */
+.slick-slide.slick-cloned {
+}
+/* Стрелка */
+.slick-arrow {
+  z-index: 100;
+
+  position: absolute;
+  content: '';
+  bottom: -58px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 0;
+  border: transparent;
+
+  background-color: transparent;
+  // transform: translateY(100%);
+}
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  left: 30%;
+
+  width: 35px;
+  height: 1px;
+
+  @media screen and (min-width: 768px) {
+    left: 42%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 44.6%;
+  }
+}
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  right: 30%;
+
+  width: 35px;
+  height: 1px;
+
+  @media screen and (min-width: 768px) {
+    right: 42%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 44.6%;
+  }
+}
+/* Стрелка не активная */
+.slick-arrow.slick-disabled {
+}
+/* Точки (булиты) */
+.slick-dots {
+}
+.slick-dots li {
+  display: none;
+}
+/* Активная точка */
+.slick-dots li.slick-active {
+  display: block;
+}
+/* Элемент точки */
+.slick-dots li button {
+  display: block;
+  position: absolute;
+  content: '';
+  bottom: -32px;
+  left: 129px;
+  transform: translateY(100%);
+
+  background-color: transparent;
+  border: none;
+  color: $colorButton;
+
+  @media screen and (min-width: 768px) {
+    left: 341px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 504px;
+    bottom: -33px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.clients-feedback__pagination--hidden {
+  color: transparent;
 }
 
 .clients-portret {
@@ -117,62 +366,70 @@
   }
 }
 
-.clients-portret--john {
-  display: none;
+// .clients-portret--john {
+//   display: none;
 
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    content: '';
-    top: 15px;
-    left: 32px;
+//   @media screen and (min-width: 768px) {
+//     position: absolute;
+//     content: '';
+//     top: 15px;
+//     left: 32px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
 
-    gap: 8px;
-    max-width: 151px;
-  }
+//     gap: 8px;
+//     max-width: 151px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    top: 100px;
-    left: 125px;
-    max-width: 285px;
-  }
-}
+//   @media screen and (min-width: 1280px) {
+//     top: 100px;
+//     left: 125px;
+//     max-width: 285px;
+//   }
+// }
 
-.clients-portret--eliz {
-  display: none;
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    content: '';
-    top: 15px;
-    right: 32px;
+// .clients-portret--eliz {
+//   display: none;
+//   @media screen and (min-width: 768px) {
+//     position: absolute;
+//     content: '';
+//     top: 15px;
+//     right: 32px;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
 
-    gap: 8px;
-    max-width: 151px;
-  }
+//     gap: 8px;
+//     max-width: 151px;
+//   }
 
-  @media screen and (min-width: 1280px) {
-    top: 100px;
-    right: 125px;
-    max-width: 285px;
+//   @media screen and (min-width: 1280px) {
+//     top: 100px;
+//     right: 125px;
+//     max-width: 285px;
+//   }
+// }
+
+.brake-text {
+  @media screen and (max-width: 767px) {
+    display: none;
   }
 }
 
 .clients-feedback {
-  @extend %centredColumnFlex;
-  gap: 32px;
+  //   @extend %centredColumnFlex;
+  //   gap: 32px;
 
-  &__text {
-    text-align: center;
-  }
+  //   &__text {
+  //     text-align: center;
+  //   }
 
   &__pagination {
+    display: inline-block;
+    margin-top: 32px;
     position: relative;
     color: $colorButton;
 
