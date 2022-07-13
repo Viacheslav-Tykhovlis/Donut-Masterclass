@@ -1,13 +1,81 @@
 .footer {
+  position: relative;
+  overflow: hidden;
   @extend %centredColumnFlex;
+
+  &::before {
+    content: '';
+    background-image: url('../images/footer/WheatFlour-mob.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    @media only screen and (min-device-pixel-ratio: 2),
+      only screen and (min-resolution: 192dpi),
+      only screen and(min-resolution: 2dppx) {
+      background-image: url('../images/footer/WheatFlour-mob@2x.png');
+    }
+
+    position: absolute;
+
+    width: 113px;
+    height: 99px;
+
+    right: -29px;
+    bottom: -26px;
+
+    z-index: -100;
+
+    @media screen and(min-width: 768px) {
+      content: '';
+      background-image: url('../images/footer/WheatFlour-tab.png');
+
+      @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+        background-image: url('../images/footer/WheatFlour-tab@2x.png');
+      }
+
+      width: 207px;
+      height: 182px;
+
+      right: -23px;
+      bottom: -63px;
+    }
+
+    @media screen and(min-width: 1280px) {
+      content: '';
+      background-image: url('../images/footer/WheatFlour-des.png');
+
+      @media only screen and (min-device-pixel-ratio: 2),
+        only screen and (min-resolution: 192dpi),
+        only screen and(min-resolution: 2dppx) {
+        background-image: url('../images/footer/WheatFlour-des@2x.png');
+      }
+
+      width: 355px;
+      height: 312px;
+
+      right: -53px;
+      bottom: -137px;
+    }
+  }
 
   &__name {
     font-family: 'Caveat Brush';
     font-weight: 400;
-    line-height: 30px;
+    line-height: 1.25;
     text-align: center;
 
     margin-bottom: 16px;
+
+    @media screen and (min-width: 768px) {
+      margin-bottom: 20px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      font-size: 36px;
+      line-height: 1.25;
+    }
   }
 
   &__title {
@@ -16,6 +84,11 @@
     line-height: 1.25;
 
     margin-bottom: 16px;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 18px;
+      line-height: 1.22;
+    }
   }
 
   &__email {
@@ -24,6 +97,15 @@
     border-bottom: 1px solid $colorButton;
     margin-bottom: 20px;
     color: $colorTextHover;
+
+    @media screen and (min-width: 768px) {
+      width: 336px;
+      margin-bottom: 16px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 394px;
+    }
   }
 
   &__email::placeholder {
@@ -38,6 +120,14 @@
     color: $colorTextHover;
 
     resize: none;
+
+    @media screen and (min-width: 768px) {
+      width: 336px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      width: 394px;
+    }
   }
 
   &__question::placeholder {
@@ -49,11 +139,6 @@
     border: none;
     border-radius: 25px;
 
-    padding-top: 8px;
-    padding-right: 57px;
-    padding-bottom: 9px;
-    padding-left: 57px;
-
     font-family: 'Caveat Brush';
     font-size: 18px;
     line-height: 1.27;
@@ -62,7 +147,22 @@
 
     color: $colorTextButton;
 
+    padding-top: 8px;
+    padding-right: 57px;
+    padding-bottom: 9px;
+    padding-left: 57px;
+
     margin-bottom: 32px;
+
+    @media screen and (min-width: 1280px) {
+      font-size: 24px;
+      line-height: 1.11;
+
+      padding-top: 8px;
+      padding-right: 67px;
+      padding-bottom: 7px;
+      padding-left: 67px;
+    }
 
     &:hover {
       background-color: #926046;
@@ -81,6 +181,10 @@
       margin-right: 0;
     }
   }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 59px;
+  }
 }
 
 .footer-link {
@@ -94,5 +198,13 @@
 
   &__city {
     color: $colorText;
+
+    @media screen and (min-width: 768px) {
+      margin-right: 65px;
+    }
+
+    @media screen and (min-width: 1280px) {
+      margin-right: 200px;
+    }
   }
 }
