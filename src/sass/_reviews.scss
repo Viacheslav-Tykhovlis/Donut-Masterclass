@@ -13,21 +13,16 @@
   }
 
   &__title {
-    color: $colorText;
-    font-family: 'Caveat Brush';
-    font-size: 24px;
-
-    text-align: center;
     margin-bottom: 20px;
 
     @media screen and (min-width: 768px) {
-      margin-bottom: 60px;
+      // margin-bottom: 60px;
+      margin-bottom: -15px;
     }
 
     @media screen and (min-width: 1280px) {
-      margin-bottom: 180px;
-      font-size: 36px;
-      line-height: 1.81;
+      // margin-bottom: 180px;
+      margin-bottom: 36px;
     }
   }
 }
@@ -87,11 +82,56 @@
   }
 }
 
-.portret-feedback-wrapper {
-  // @extend %centredColumnFlex;
+//slider styles
+.slider {
+  position: relative;
 }
 
-// // small slider-right styles
+.slick-list {
+  overflow: hidden;
+}
+
+.slick-track {
+  display: flex;
+}
+
+.slick-slide {
+  @extend %centredColumnFlex;
+
+  text-align: center;
+}
+
+.slider__item {
+  position: relative;
+}
+
+// small portrets
+.cliens-portret-small {
+  text-decoration: none;
+  z-index: 1000;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 32px;
+
+    width: 152px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 0px;
+    width: 285px;
+  }
+}
+
 .cliens-portret-small-right {
   z-index: 1000;
   @media screen and (max-width: 767px) {
@@ -99,243 +139,37 @@
   }
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
     position: absolute;
     content: '';
-    // display: flex;
-    // gap: 400px;
-    display: block;
-    top: 15;
+    top: 0;
     right: 32px;
 
     width: 152px;
-    // height: 152px;
   }
 
   @media screen and (min-width: 1280px) {
-    right: 123px;
+    right: 0px;
     width: 285px;
-    // height: 285px;
   }
 }
 
-.slider-right-small .slick-list {
-  overflow: hidden;
-}
-
-.slider-right-small .slick-track {
-  // gap: 300px;
-  // margin-right: 300px;
-  display: flex;
-  justify-content: space-between;
-}
-
-// small slider styles
-.cliens-portret-small {
-  z-index: 1000;
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
-
-  @media screen and (min-width: 768px) {
-    position: absolute;
-    content: '';
-    // display: flex;
-    // gap: 400px;
-    display: block;
-    top: 15;
-    left: 32px;
-
-    width: 152px;
-    // height: 152px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 123px;
-    width: 285px;
-    // height: 285px;
-  }
-}
-
-.clients-portret-small__item {
-  @media screen and (min-width: 768px) {
-    width: 152px;
-    // padding-left: 100px;
-    // margin-right: 400px;
-    // height: 152px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 285px;
-    // height: 285px;
-  }
-}
-.slider-small .slick-list {
-  overflow: hidden;
-}
-
-.slider-small .slick-track {
-  // gap: 300px;
-  // margin-right: 300px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.slider-small .slider__item {
-  // margin-right: 500px;
-  // margin-left: auto;
-}
-
-.slider-small {
-  // position: absolute;
-  // top: 0;
-  // left: 0;
-}
-
-.slider-small__item {
-}
-
-// BIG slider styles
-.slider {
-  position: relative;
-}
-/* Слайдер */
-.slick-slider {
-}
-/* Слайдер запущен */
-.slick-slider.slick-initialized {
-}
-/* Слайдер с точками */
-.slick-slider.slick-dotted {
-}
-/* Ограничивающая оболочка */
-.slick-list {
-  overflow: hidden;
-}
-/* Лента слайдов */
-.slick-track {
-  display: flex;
-  // justify-content: space-between;
-  // gap: 200px;
-}
-/* Слайд */
-.slick-slide {
-  @extend %centredColumnFlex;
-
-  text-align: center;
-}
-/* Слайд активный (показывается) */
-.slick-slide.slick-active {
-}
-/* Слайд основной */
-.slick-slide.slick-current {
-}
-/* Слайд по центру */
-.slick-slide.slick-center {
-}
-/* Клонированный слайд */
-.slick-slide.slick-cloned {
-}
-/* Стрелка */
-.slick-arrow {
-  z-index: 100;
-
-  position: absolute;
-  content: '';
-  bottom: -58px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-
-  font-size: 0;
-  border: transparent;
-
-  background-color: transparent;
-  // transform: translateY(100%);
-}
-/* Стрелка влево */
-.slick-arrow.slick-prev {
-  left: 30%;
-
-  width: 35px;
-  height: 1px;
-
-  @media screen and (min-width: 768px) {
-    left: 42%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 44.6%;
-  }
-}
-/* Стрелка вправо */
-.slick-arrow.slick-next {
-  right: 30%;
-
-  width: 35px;
-  height: 1px;
-
-  @media screen and (min-width: 768px) {
-    right: 42%;
-  }
-
-  @media screen and (min-width: 1280px) {
-    right: 44.6%;
-  }
-}
-/* Стрелка не активная */
-.slick-arrow.slick-disabled {
-}
-/* Точки (булиты) */
-.slick-dots {
-}
-.slick-dots li {
-  display: none;
-}
-/* Активная точка */
-.slick-dots li.slick-active {
-  display: block;
-}
-/* Элемент точки */
-.slick-dots li button {
-  display: block;
-  position: absolute;
-  content: '';
-  bottom: -32px;
-  left: 129px;
-  transform: translateY(100%);
-
-  background-color: transparent;
-  border: none;
-  color: $colorButton;
-
-  @media screen and (min-width: 768px) {
-    left: 341px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    left: 504px;
-    bottom: -33px;
-  }
-
-  @media screen and (max-width: 1279px) {
-    font-size: 14px;
-    line-height: 1.21;
-  }
-}
-
-.clients-feedback__pagination--hidden {
-  color: transparent;
-}
-
+// big portret
 .clients-portret {
   @extend %centredColumnFlex;
   gap: 8px;
   margin-bottom: 8px;
 
   @media screen and (min-width: 768px) {
+    padding-top: 75px;
     max-width: 336px;
   }
 
   @media screen and (min-width: 1280px) {
+    padding-top: 142px;
     max-width: 394px;
   }
 
@@ -350,6 +184,7 @@
   }
 }
 
+// icon stars
 .stars-container {
   &__icon {
     fill: $colorButton;
@@ -366,67 +201,12 @@
   }
 }
 
-// .clients-portret--john {
-//   display: none;
-
-//   @media screen and (min-width: 768px) {
-//     position: absolute;
-//     content: '';
-//     top: 15px;
-//     left: 32px;
-
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     gap: 8px;
-//     max-width: 151px;
-//   }
-
-//   @media screen and (min-width: 1280px) {
-//     top: 100px;
-//     left: 125px;
-//     max-width: 285px;
-//   }
-// }
-
-// .clients-portret--eliz {
-//   display: none;
-//   @media screen and (min-width: 768px) {
-//     position: absolute;
-//     content: '';
-//     top: 15px;
-//     right: 32px;
-
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     gap: 8px;
-//     max-width: 151px;
-//   }
-
-//   @media screen and (min-width: 1280px) {
-//     top: 100px;
-//     right: 125px;
-//     max-width: 285px;
-//   }
-// }
-
-.brake-text {
-  @media screen and (max-width: 767px) {
-    display: none;
-  }
+.stars-container__icon--empty {
+  fill: transparent;
+  stroke: $colorButton;
 }
 
 .clients-feedback {
-  //   @extend %centredColumnFlex;
-  //   gap: 32px;
-
-  //   &__text {
-  //     text-align: center;
-  //   }
-
   &__pagination {
     display: inline-block;
     margin-top: 32px;
@@ -440,6 +220,14 @@
   }
 }
 
+// br in feedback text
+.brake-text {
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+}
+
+// pagination
 .clients-feedback__pagination::before {
   background-color: currentColor;
   display: block;
@@ -462,4 +250,88 @@
   width: 35px;
   height: 1px;
   transform: translateX(50%);
+}
+
+.clients-feedback__pagination--hidden {
+  color: transparent;
+}
+
+// transformed arrows in pagination lines
+.slick-arrow {
+  z-index: 100;
+
+  position: absolute;
+  content: '';
+  bottom: -58px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-size: 0;
+  border: transparent;
+
+  background-color: transparent;
+  // transform: translateY(100%);
+}
+
+// left arrow
+.slick-arrow.slick-prev {
+  left: 30%;
+
+  width: 35px;
+  height: 1px;
+
+  @media screen and (min-width: 768px) {
+    left: 42%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    left: 44.6%;
+  }
+}
+
+// right arrow
+.slick-arrow.slick-next {
+  right: 30%;
+
+  width: 35px;
+  height: 1px;
+
+  @media screen and (min-width: 768px) {
+    right: 42%;
+  }
+
+  @media screen and (min-width: 1280px) {
+    right: 44.6%;
+  }
+}
+
+.slick-dots li {
+  display: none;
+}
+
+.slick-dots li.slick-active {
+  display: block;
+}
+
+.slick-dots li button {
+  z-index: 1000;
+  display: block;
+  position: absolute;
+  content: '';
+
+  bottom: 0;
+  left: -2px;
+
+  background-color: transparent;
+  border: none;
+  color: $colorButton;
+
+  @media screen and (min-width: 1280px) {
+    bottom: 1px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
 }
